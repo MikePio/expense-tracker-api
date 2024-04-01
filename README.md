@@ -2,6 +2,7 @@
 
 Creazione un'API REST per il monitoraggio spese utilizzando Spring Boot in cui verrà utilizzato PostgreSQL come database relazionale e Spring JdbcTemplate per interagire con esso. Inoltre, verrà aggiunta l'autenticazione tramite JWT (JSON Web Tokens).
 
+Ispirato da https://www.youtube.com/watch?v=0-nCSvAkxqI&list=PLWieu6NbbqTwwYwylgXmmKVX1ZWsUVx8m&index=3
 Time: 2h 11min
 
 # STEPS
@@ -37,6 +38,8 @@ sudo docker container ls
 ---
 
 # Creazione del database
+
+#### Video 2 - Project Setup & Creating Database Objects
 
 Dopo aver creato il file `expensetracker_db.sql` ed averlo compilato con tutti i dati delle tabelle e le diverse relzioni tra tabelle, eseguire nel terminale i seguenti comandi:
 
@@ -77,7 +80,7 @@ spring.datasource.password=password
 
 aprire il browser, cercare localhost:8080 e dovrebbe apparire la pagina di errore di spring boot con scritto "Whitelabel Error Page", ciò fa capire che spring boot sta funzionando.
 
-# CONTINUA DA QUI
+---
 
 Creare un nuovo package all'interno di `src/main/java/com/java/expensetrackerapi` e chiamarlo `controller`.
 
@@ -85,7 +88,7 @@ All'interno del package controller, creare un file java per inserire il controll
 
 In `UsersController.java`, creare un metodo POST per la registrazione.
 
-Testare il medoto post con thunderclient o postman inserendo e compilando i campi inseriti nel metodo POST della registrazione:
+Testare il medoto POST con thunderclient o postman inserendo e compilando il body della richiesta con i campi inseriti nel metodo (POST) della registrazione nell'UserController:
 
 in questo caso ad esempio:
 {
@@ -95,9 +98,22 @@ in questo caso ad esempio:
   "password": "123"
 } 
 
-ottenendo in output: David, Smith, david@testemail.com, 123
+inviando i dati nel body in POST si dovrebbe ottenere in output: David, Smith, david@testemail.com, 123
+
+# CONTINUA DA QUI
+
+#### Video 3 - Persisting User Information on Register
 
 
+#### Video 4 - Login and Hashing Password
+#### Video 5 - JWT Authentication
+#### Video 6 - Adding New Categories
+#### Video 7 - Category - Find & Update Functionality
+#### Video 8 - Adding Category Transactions
+#### Video 9 - Transaction - Find and Update
+#### Video 10 - Deleting - Category & Transactions
+#### Video 11 - CORS & Testing from Web Client
+#### Video 12 - Summary and Code !
 
 
 
